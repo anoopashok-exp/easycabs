@@ -1,0 +1,11 @@
+body{
+    color: rgb(242, 247, 247);
+    text-decoration-color:rgb(72, 77, 87);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    margin-left: 200px;
+    margin-right: 200px;
+}

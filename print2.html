@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Print</title>
+    </head>
+    <body>
+        Submitted details:
+        <input type="button" name="btnshow" value="Show Data" onclick="showData();"/>
+        First Name:<label id="lblfirstname"></label>
+        Welcome <span id="fullname"></span> !your  is journey from<span id="address"></span> to <span id="address1"></span> is CONFIRMED!!!!!
+        <script>
+            function showData(){
+                //var submittedData = localstorage.getItem('fromData');
+                var firstname = localStorage.getItem('firstname');
+                var lastname = localStorage.getItem('lastname');
+                var address = localStorage.getItem('address');
+                var address1 = localStorage.getItem('address1')
+                console.log(firstname);
+                document.getElementById('fullname').innerHTML=firstname+" "+lastname;
+                document.getElementById('address').innerHTML=address;
+                document.getElementById('address1').innerHTML=address1
+                document.getElementById('lblfirstname').innerHTML=firstname;
+            }
+        </script>
+    </body>
+</html>

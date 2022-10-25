@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Easycab Booking Page</title>
+        <link rel="stylesheet" href="booking.css">
+    </head>
+    <body background="easycab.webp" text="black">
+    <h1>BOOK YOUR CAB</h1>
+    <form action="print2.html" method="get">
+       <table cellspacing="6" cellpadding="2">
+        <!-- booking form start-->
+        <form --------->
+        <tr>
+            <td>
+        
+                <label for="title">Book your cab</label>
+            </td>
+            <td>
+                <select id="title" name="title" >
+                    <option value="1" selected>Mr.</option>
+                    <option value="2">Mrs.</option>
+                    <option value="3">Ms.</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                <label for="firstname">First Name</label>
+            </td> 
+            <td>
+                <input type="text" id="firstname" name="firstname" placeholder="First Name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="lastname">Last Name</label>
+            </td>
+            <td>
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="address">From</label>
+            </td>
+            <td>
+                <textarea  id="address" name="address" placeholder="Enter starting location" rows="1" cols="20"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="address1">To</label>
+            </td>
+            <td>
+                <textarea id="address1" name="address1" placeholder="Enter your destination" rows="1" cols="20"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="dateofbirth">Date of Journey"</label>
+            </td>
+            <td>
+                <input type="date" id="date" name="date">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="time">Time of Journey"</label>
+            </td>
+            <td>
+                <input type="time" id="time" name="time">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="contact?">Payment Gateway</label>
+            </td>
+            <td>
+                <input type="radio" id="yes" name="contact" value="3">CASH ON TIME
+                <input type="radio" id="no" name="contact" value="4">ONLINE PAYMENT
+            </td>
+        </tr>
+
+       
+        <tr>
+            <td>
+                <label for="contact?">Can we contact you?</label>
+            </td>
+            <td>
+                <input type="radio" id="yes" name="contact" value="1">Yes
+                <input type="radio" id="no" name="contact" value="2">No
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="communication">Communication Preference</label>
+            </td>
+            <td>
+                <input type="checkbox" id="email" name="email" value="email">Email
+                <input type="checkbox" id="sms" name="sms" value="sms">SMS
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="checkbox" id="agree" name="agree" value="yes">
+                <label for="agree">  I agree to the <a href="#">terms and conditions</a> of the website</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" id="submit" name="submit" onclick="javascript:saveData();">
+            </td>
+            <td>
+                <input type="reset" id="reset" name="reset">
+            </td>
+        </tr>
+            
+       </table>  
+       </form>
+       <script> 
+
+        function saveData(){ 
+     
+            var firstname = document.getElementById('firstname').value;
+     
+            var lastname = document.getElementById('lastname').value;
+     
+            var address = document.getElementById('address').value;
+
+            var address1 = document.getElementById('address1').value;
+     
+      
+            localStorage.setItem('firstname',firstname);
+     
+            localStorage.setItem('lastname',lastname);
+     
+            localStorage.setItem('address',address);
+            alert(firstname)
+     
+      
+     
+     } 
+     </script>
+     <tr>
+    <a href="home.html">Back</a>
+    </tr>
+    </body>
+</html>
