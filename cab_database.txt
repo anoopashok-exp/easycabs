@@ -1,0 +1,45 @@
+create DATABASE CAB;
+USE CAB;
+CREATE TABLE PASSENGER(
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(50) NOT NULL,
+username varchar(50) not null,
+email VARCHAR(50) NOT NULL UNIQUE,
+password VARCHAR(50) NOT NULL,
+age INT NOT NULL,
+address varchar(50) not null,
+dob date
+);
+
+use CAB;
+CREATE TABLE CAB1(
+cab_no INT not null unique,
+cab_name VARCHAR(50) NOT NULL,
+cab_description varchar(50) not null,
+cab_total_capacity int not null
+);
+
+create table cab_schedule(
+cab_from varchar(50) not null,
+cab_to VARCHAR(50) NOT NULL,
+cab_date date,
+cab_time time,
+cost INT NOT NULL,
+cab_no int not null
+);
+
+create table BOOKED_CAB(
+booking_no int not null,
+date_of_booking date,
+date_of_ride date,
+cab_no int,
+constraint FK_BOOKEDTICKET_cab foreign key
+(cab_no) references CAB1(cab_no) on delete set null,
+cab_from varchar(50) not null,
+cab_to varchar(50) not null,
+cab_time time,
+boarding_time time,
+cab_seat int,
+passenger_id int,
+constraint FK_bookcab_passengerid foreign key
+(passenger_id) references passenger(id) on delete set null);
